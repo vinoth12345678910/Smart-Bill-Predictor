@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-Backend Connection Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .endpoint {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+        }
+        .endpoint h3 {
+            margin: 0 0 10px 0;
+            color: #007bff;
+        }
+        .response {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 3px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .success { border-left-color: #28a745; }
+        .error { border-left-color: #dc3545; }
+        .loading { border-left-color: #ffc107; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .status.success { background: #d4edda; color: #155724; }
+        .status.error { background: #f8d7da; color: #721c24; }
+        .status.loading { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Smart Energy Management System - Frontend Test</h1>
+        <p>This page tests the connection between your frontend and the backend server.</p>
+        
+        <div class="status" id="serverStatus">Checking server status...</div>
+        
+        <h2>API Endpoint Tests</h2>
+        
+        <div class="endpoint">
+            <h3>🏠 Root Endpoint</h3>
+            <button onclick="testEndpoint('/')">Test Root</button>
+            <div class="response" id="rootResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>📊 Dashboard Data</h3>
+            <button onclick="testEndpoint('/web/dashboard')">Test Dashboard</button>
+            <div class="response" id="dashboardResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>⚙️ System Status</h3>
+            <button onclick="testEndpoint('/status')">Test Status</button>
+            <div class="response" id="statusResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>🔧 Integration Status</h3>
+            <button onclick="testEndpoint('/web/integration-status')">Test Integration</button>
+            <div class="response" id="integrationResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>⚡ Appliance Health</h3>
+            <button onclick="testEndpoint('/appliance-health/health')">Test Appliance Health</button>
+            <div class="response" id="applianceResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>☀️ Solar Calculator</h3>
+            <button onclick="testEndpoint('/solar-calculator/info')">Test Solar Calculator</button>
+            <div class="response" id="solarResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>💰 Bill Simulation</h3>
+            <button onclick="testEndpoint('/bill-simulation/info')">Test Bill Simulation</button>
+            <div class="response" id="billResponse">Click button to test</div>
+        </div>
+        
+        <div class="endpoint">
+            <h3>🌍 Carbon Tracker</h3>
+            <button onclick="testEndpoint('/carbon-tracker/health')">Test Carbon Tracker</button>
+            <div class="response" id="carbonResponse">Click button to test</div>
+        </div>
+        
+        <h2>Frontend Configuration</h2>
+        <div class="endpoint">
+            <h3>⚙️ Frontend Config</h3>
+            <button onclick="testEndpoint('/web/config')">Get Config</button>
+            <div class="response" id="configResponse">Click button to test</div>
+        </div>
+        
+        <h2>Test All Endpoints</h2>
+        <button onclick="testAllEndpoints()" style="background: #28a745; font-size: 16px; padding: 12px 24px;">
+            🧪 Test All Endpoints
+        </button>
+    </div>
+
+    <script>
+        const BASE_URL = 'http://localhost:8000';
+        
+        // Check server status on page load
+        window.onload = function() {
+            checkServerStatus();
+        };
+        
+        async function checkServerStatus() {
+            const statusDiv = document.getElementById('serverStatus');
+            statusDiv.className = 'status loading';
+            statusDiv.textContent = 'Checking server status...';
+            
+            try {
+                const response = await fetch(`${BASE_URL}/health`);
+                if (response.ok) {
+                    const data = await response.json();
+                    statusDiv.className = 'status success';
+                    statusDiv.textContent = `✅ Server is running! Status: ${data.status}`;
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.textContent = `❌ Server connection failed: ${error.message}`;
+            }
+        }
+        
+        async function testEndpoint(endpoint) {
+            const responseId = endpoint.replace(/\//g, '').replace(/-/g, '') + 'Response';
+            const responseDiv = document.getElementById(responseId);
+            
+            if (!responseDiv) {
+                console.error('Response div not found for:', endpoint);
+                return;
+            }
+            
+            responseDiv.textContent = 'Testing...';
+            responseDiv.style.borderLeftColor = '#ffc107';
+            
+            try {
+                const response = await fetch(`${BASE_URL}${endpoint}`);
+                const data = await response.json();
+                
+                responseDiv.textContent = JSON.stringify(data, null, 2);
+                responseDiv.style.borderLeftColor = '#28a745';
+            } catch (error) {
+                responseDiv.textContent = `Error: ${error.message}`;
+                responseDiv.style.borderLeftColor = '#dc3545';
+            }
+        }
+        
+        async function testAllEndpoints() {
+            const endpoints = [
+                '/',
+                '/web/dashboard',
+                '/status',
+                '/web/integration-status',
+                '/appliance-health/health',
+                '/solar-calculator/info',
+                '/bill-simulation/info',
+                '/carbon-tracker/health',
+                '/web/config'
+            ];
+            
+            for (const endpoint of endpoints) {
+                await testEndpoint(endpoint);
+                // Small delay between requests
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+        }
+        
+        // Test POST endpoint
+        async function testPreferences() {
+            const responseDiv = document.getElementById('preferencesResponse');
+            responseDiv.textContent = 'Testing POST request...';
+            
+            try {
+                const response = await fetch(`${BASE_URL}/web/preferences`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        location: 'Test City',
+                        energy_company: 'Test Utility',
+                        monthly_budget: 150.0,
+                        solar_interest: true,
+                        appliance_monitoring: true,
+                        carbon_tracking: true
+                    })
+                });
+                
+                const data = await response.json();
+                responseDiv.textContent = JSON.stringify(data, null, 2);
+                responseDiv.style.borderLeftColor = '#28a745';
+            } catch (error) {
+                responseDiv.textContent = `Error: ${error.message}`;
+                responseDiv.style.borderLeftColor = '#dc3545';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+{
+  "Andhra Pradesh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.60 },
+        { "upto": 400, "rate": 4.90 },
+        { "upto": 600, "rate": 6.40 },
+        { "above": 600, "rate": 7.20 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.12
+      },
+      "season_multipliers": {
+        "summer": 1.06,
+        "monsoon": 1.0,
+        "winter": 0.96
+      }
+    }
+  },
+  "Arunachal Pradesh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.15,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Assam": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 120, "rate": 0.0 },
+        { "upto": 240, "rate": 3.90 },
+        { "upto": 360, "rate": 5.20 },
+        { "above": 360, "rate": 6.10 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.92,
+        "mid": 1.0,
+        "peak": 1.10
+      },
+      "season_multipliers": {
+        "summer": 1.04,
+        "monsoon": 1.0,
+        "winter": 0.98
+      }
+    }
+  },
+  "Bihar": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 3.20 },
+        { "upto": 400, "rate": 5.80 },
+        { "above": 400, "rate": 6.75 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.88,
+        "mid": 1.0,
+        "peak": 1.15
+      },
+      "season_multipliers": {
+        "summer": 1.08,
+        "monsoon": 1.0,
+        "winter": 0.94
+      }
+    }
+  },
+  "Chhattisgarh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.80 },
+        { "upto": 400, "rate": 5.20 },
+        { "above": 400, "rate": 6.30 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.14
+      },
+      "season_multipliers": {
+        "summer": 1.05,
+        "monsoon": 1.0,
+        "winter": 0.97
+      }
+    }
+  },
+  "Delhi": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 200, "rate": 0.0 },
+        { "upto": 400, "rate": 3.0 },
+        { "upto": 800, "rate": 6.5 },
+        { "upto": 1200, "rate": 7.0 },
+        { "above": 1200, "rate": 8.0 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.92,
+        "mid": 1.0,
+        "peak": 1.12
+      },
+      "season_multipliers": {
+        "summer": 1.06,
+        "monsoon": 1.0,
+        "winter": 0.97
+      }
+    }
+  },
+  "Goa": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.25,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Gujarat": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.60 },
+        { "upto": 400, "rate": 4.80 },
+        { "above": 400, "rate": 6.00 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.85,
+        "mid": 1.0,
+        "peak": 1.20
+      },
+      "season_multipliers": {
+        "summer": 1.10,
+        "monsoon": 1.0,
+        "winter": 0.92
+      }
+    }
+  },
+  "Haryana": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.80 },
+        { "upto": 400, "rate": 5.20 },
+        { "above": 400, "rate": 6.00 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.16
+      },
+      "season_multipliers": {
+        "summer": 1.07,
+        "monsoon": 1.0,
+        "winter": 0.95
+      }
+    }
+  },
+  "Himachal Pradesh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.00,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Jharkhand": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 3.10 },
+        { "upto": 400, "rate": 5.60 },
+        { "above": 400, "rate": 6.35 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.92,
+        "mid": 1.0,
+        "peak": 1.12
+      },
+      "season_multipliers": {
+        "summer": 1.06,
+        "monsoon": 1.0,
+        "winter": 0.96
+      }
+    }
+  },
+  "Karnataka": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.60 },
+        { "upto": 400, "rate": 4.90 },
+        { "upto": 600, "rate": 6.40 },
+        { "upto": 800, "rate": 7.15 },
+        { "upto": 1000, "rate": 7.90 },
+        { "above": 1000, "rate": 8.50 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.88,
+        "mid": 1.0,
+        "peak": 1.18
+      },
+      "season_multipliers": {
+        "summer": 1.08,
+        "monsoon": 1.0,
+        "winter": 0.95
+      }
+    }
+  },
+  "Kerala": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.80 },
+        { "upto": 400, "rate": 5.20 },
+        { "above": 400, "rate": 6.05 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.14
+      },
+      "season_multipliers": {
+        "summer": 1.05,
+        "monsoon": 1.0,
+        "winter": 0.98
+      }
+    }
+  },
+  "Madhya Pradesh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.90 },
+        { "upto": 400, "rate": 5.40 },
+        { "above": 400, "rate": 6.55 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.88,
+        "mid": 1.0,
+        "peak": 1.18
+      },
+      "season_multipliers": {
+        "summer": 1.08,
+        "monsoon": 1.0,
+        "winter": 0.94
+      }
+    }
+  },
+  "Maharashtra": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.85,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Manipur": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.05,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Meghalaya": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.00,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Mizoram": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.00,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Nagaland": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.10,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Odisha": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.80 },
+        { "upto": 400, "rate": 5.20 },
+        { "above": 400, "rate": 6.20 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.12
+      },
+      "season_multipliers": {
+        "summer": 1.04,
+        "monsoon": 1.0,
+        "winter": 0.98
+      }
+    }
+  },
+  "Punjab": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 3.20 },
+        { "upto": 400, "rate": 5.80 },
+        { "above": 400, "rate": 6.00 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.15
+      },
+      "season_multipliers": {
+        "summer": 1.08,
+        "monsoon": 1.0,
+        "winter": 0.94
+      }
+    }
+  },
+  "Rajasthan": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.90 },
+        { "upto": 400, "rate": 5.40 },
+        { "above": 400, "rate": 6.29 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.88,
+        "mid": 1.0,
+        "peak": 1.16
+      },
+      "season_multipliers": {
+        "summer": 1.09,
+        "monsoon": 1.0,
+        "winter": 0.93
+      }
+    }
+  },
+  "Sikkim": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.20,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Tamil Nadu": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.35 },
+        { "upto": 400, "rate": 4.7 },
+        { "upto": 500, "rate": 6.3 },
+        { "upto": 600, "rate": 8.4 },
+        { "upto": 800, "rate": 9.45 },
+        { "upto": 1000, "rate": 10.5 },
+        { "above": 1000, "rate": 11.55 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.9,
+        "mid": 1.0,
+        "peak": 1.15
+      },
+      "season_multipliers": {
+        "summer": 1.05,
+        "monsoon": 1.0,
+        "winter": 0.98
+      }
+    }
+  },
+  "Telangana": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.70 },
+        { "upto": 400, "rate": 5.00 },
+        { "above": 400, "rate": 6.45 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.92,
+        "mid": 1.0,
+        "peak": 1.14
+      },
+      "season_multipliers": {
+        "summer": 1.07,
+        "monsoon": 1.0,
+        "winter": 0.95
+      }
+    }
+  },
+  "Tripura": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.05,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "Uttar Pradesh": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 3.20 },
+        { "upto": 400, "rate": 5.80 },
+        { "above": 400, "rate": 7.10 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.18
+      },
+      "season_multipliers": {
+        "summer": 1.09,
+        "monsoon": 1.0,
+        "winter": 0.93
+      }
+    }
+  },
+  "Uttarakhand": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.05,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  },
+  "West Bengal": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "slabs": [
+        { "upto": 100, "rate": 0.0 },
+        { "upto": 200, "rate": 2.90 },
+        { "upto": 400, "rate": 5.40 },
+        { "above": 400, "rate": 6.50 }
+      ],
+      "time_of_day_multipliers": {
+        "off_peak": 0.90,
+        "mid": 1.0,
+        "peak": 1.14
+      },
+      "season_multipliers": {
+        "summer": 1.06,
+        "monsoon": 1.0,
+        "winter": 0.96
+      }
+    }
+  },
+  "Jammu & Kashmir": {
+    "domestic": {
+      "fixed_charge": 0.0,
+      "flat_rate": 6.10,
+      "time_of_day_multipliers": { "mid": 1.0 },
+      "season_multipliers": { "monsoon": 1.0 }
+    }
+  }
+}
+
+
